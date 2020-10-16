@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Feedback form</title>
+    <script>
+        function showMsg()
+        {
+            var isComplete = new Boolean(true);
+            var element = document.getElementById("experience");
+            if(!(element && element.value))
+            {
+                isComplete = false;
+            }
+            if(isComplete)
+            {
+                window.alert("Successfully submitted!");
+            }
+        }
+
+        function reset()
+        {
+            var isComplete = new Boolean(true);
+            var name      =     document.getElementsByName("name");
+            var prn          =     document.getElementsByName("prn");
+            var cls        =     document.getElementsByName("class");
+            var branch     = document.getElementsByName("branch");
+            var hostel     = document.getElementsByName("hostel");
+            var roomno     = document.getElementsByName("roomno");
+            var idcard     = document.getElementsByName("idcard");
+            var marksheet = document.getElementsByName("marksheet");
+            var experience = document.getElementsById("experience");
+
+            name.value="";
+            name.value="";
+            prn.value="";
+            cls.value="";
+            branch.value="";
+            hostel.value="";
+            roomno.value="";
+            idcard.value="";
+            marksheet.value="";
+            experience.value="";
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">WCE Hostel feedback form</h1> <hr>
+    <center>
+    <form id="frm" name="frm" action="#" method="post" autocomplete="on">
+        <table>
+            <tr>
+                <td><label for="name" form="id">Name </label></td>
+                <td><input type="text" name="name" placeholder="your name "></td>
+            </tr>
+            <tr>
+                <td><label for="prn" form="id">PRN </label></td>
+                <td><input type="text" name="prn" placeholder="2019BTECS0XXXX"></td>
+            </tr>
+            <tr>X
+                <td><label for="class" form="id">Class </label></td>
+                <td><input type="text" name="class" placeholder="SY"></td>
+            </tr>
+            <tr>
+                <td><label for="branch" form="id">Branch </label></td>
+                <td><input type="text" name="branch" placeholder="Computer Science"></td>
+            </tr>
+            <tr>
+                <td><label for="hostel" form="id">Hostel </label></td>
+                <td><input type="text" name="hostel" placeholder="S8"></td>
+            </tr>
+            <tr>
+                <td><label for="roomno" form="id">Room No </label></td>
+                <td><input type="text" name="roomno" placeholder="13"></td>
+            </tr>
+            <tr>
+                <td><label for="idcard" form="id">Id card </label></td>
+                <td><input type="file" name="idcard" accept="application/pdf,image/jpeg"></td>
+            </tr>
+            <tr>
+                <td><label for="marksheet" form="id">Marksheet </label></td>
+                <td><input type="file" name="marksheet" accept="application/pdf"></td>
+            </tr>
+
+            <tr>
+                <td><label for="experience" form="id">Overall Experience </label></td>
+                <td><textarea id="experience" name="experience" cols="24" rows="7" placeholder="Share your experience(upto 100 words)" maxlength="600" required></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" onclick="showMsg();"></td>
+                <td><input type="button" value="Reset" onclick="reset();"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
